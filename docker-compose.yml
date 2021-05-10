@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  db_dev:
+    image: mysql:5.7.33
+    volumes:
+      - "C:/Users/sorin_000/Work/symfony/activeweather/db_data:/var/lib/mysql"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=activeweather_db
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpassword
